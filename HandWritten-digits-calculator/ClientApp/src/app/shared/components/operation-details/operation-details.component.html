@@ -1,0 +1,6 @@
+<div class="content" [style.backgroundImage]="loading ? 'url(' + loadingImage + ')' : 'unset'">
+  <p [style.maxWidth]="resultScreenSize"
+     [style.visibility]="operationDetails || loading ? 'visible' : 'hidden'">
+    {{loading ? '...loading...' : operationDetails ? operationDetails : '0'}}
+  </p>
+</div>

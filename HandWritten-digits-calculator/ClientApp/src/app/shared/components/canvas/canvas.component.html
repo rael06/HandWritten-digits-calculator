@@ -1,0 +1,7 @@
+<div class="content" (mousedown)="showPleaseClearModal()">
+  <canvas id="canvas"></canvas>
+  <div class="buttons">
+    <input class='btn btn-danger' type='button' value="Clear" (click)="clear()" [disabled]="!allow">
+    <input class='btn btn-success' type='button' value="Write" id='img' (click)="write()" [disabled]="!allow">
+  </div>
+</div>

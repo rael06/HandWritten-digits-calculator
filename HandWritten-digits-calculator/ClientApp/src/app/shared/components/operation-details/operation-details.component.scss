@@ -1,0 +1,21 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: black;
+  border-radius: 6px;
+  color: white;
+  background-position: center;
+  -webkit-box-shadow: inset 1px 1px 2px 2px rgba(255,255,255,0.75);
+  -moz-box-shadow: inset 1px 1px 2px 2px rgba(255,255,255,0.75);
+  box-shadow: inset 1px 1px 2px 2px rgba(255,255,255,0.75);
+
+  p {
+    font-family: "Consolas", serif;
+    text-align: center;
+    word-break: break-all;
+    font-size: 2em;
+    padding: 10px 10px;
+    margin-bottom: 0;
+  }
+}

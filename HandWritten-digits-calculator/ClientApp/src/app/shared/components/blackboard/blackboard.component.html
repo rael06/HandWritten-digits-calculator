@@ -1,0 +1,24 @@
+<div class="content">
+  <div class="firstLine">
+    <div>
+      <app-draw [dataURI]="signDictionaryService.get['empty']" [imgSize]="imgSize"></app-draw>
+    </div>
+    <div class="number">
+      <app-digit *ngFor="let digit of operation.number1" [digit]="digit" [imgSize]=imgSize></app-digit>
+    </div>
+  </div>
+  <div class="secondLine">
+    <div>
+      <app-draw [dataURI]="signDictionaryService.get[operation.operator]"
+                [imgSize]="imgSize"></app-draw>
+    </div>
+    <div class="number">
+      <app-digit *ngFor="let digit of operation.number2" [digit]="digit"
+                 [imgSize]=imgSize></app-digit>
+    </div>
+  </div>
+  <div class="line" [style.visibility]="result.length > 0 ? 'visible' : 'hidden'" [style.height]="imgSize"></div>
+  <div class="result" [style.visibility]="result.length > 0 ? 'visible' : 'hidden'">
+    <app-digit *ngFor="let digit of result" [digit]="digit" [imgSize]=imgSize></app-digit>
+  </div>
+</div>

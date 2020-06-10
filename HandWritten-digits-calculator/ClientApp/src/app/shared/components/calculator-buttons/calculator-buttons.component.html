@@ -1,0 +1,8 @@
+<div class="content">
+  <input class='btn btn-primary' type='button' value="C" (click)="emitClearEvent()" [disabled]="loading">
+  <input class='btn btn-primary' type='button' value="+" (click)="emitOperatorEvent('+')" [disabled]="loading || !allowAll">
+  <input class='btn btn-primary' type='button' value="-" (click)="emitOperatorEvent('-')" [disabled]="loading || !allowAll">
+  <input class='btn btn-primary' type='button' value="x" (click)="emitOperatorEvent('x')" [disabled]="loading || !allowAll">
+  <input class='btn btn-primary' type='button' value="/" (click)="emitOperatorEvent('/')" [disabled]="loading || !allowAll">
+  <input class='btn btn-primary' type='button' value="=" (click)="emitAskResultEvent()" [disabled]=" loading || !allowAll">
+</div>

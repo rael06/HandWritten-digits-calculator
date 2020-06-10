@@ -1,0 +1,21 @@
+<div class="content">
+  <h1>Hand-written digits calculator</h1>
+  <div class="main">
+    <div class="calculator">
+      <app-canvas [canvasSize]="canvasSize" (drawWritten)="saveDraw($event)"
+                  [allow]="!loading && operation.operationString === undefined"></app-canvas>
+      <app-calculator-buttons [loading]="loading"
+                              [allowAll]="operation.number1.length > 0 && !operation.operationString"
+                              (operatorEvent)="setOperator($event)"
+                              (askResultEvent)="sendOperation()"
+                              (clearEvent)="clearOperation()">
+      </app-calculator-buttons>
+      <app-operation-details [resultScreenSize]="canvasSize" [loading]="loading" [operationDetails]="operation.operationString"></app-operation-details>
+    </div>
+    <div class="blackboard">
+      <div>
+        <app-blackboard [operation]="operation"></app-blackboard>
+      </div>
+    </div>
+  </div>
+</div>

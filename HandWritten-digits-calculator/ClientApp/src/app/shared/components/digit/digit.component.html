@@ -1,0 +1,3 @@
+<div [class]="digit.prediction?.scores ? 'content scored' : 'content'">
+  <img *ngIf="digit.data" [src]="'data:image/png;base64,' + digit.data" alt="" [title]="scores" [style.maxWidth]="imgSize">
+</div>
