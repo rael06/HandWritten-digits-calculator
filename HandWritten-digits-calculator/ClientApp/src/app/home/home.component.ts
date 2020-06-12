@@ -58,7 +58,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.digitIndex = 0;
     this.numberIndex++;
     this.blackboardComponent.resizeImages();
-    console.log(this.operation);
   }
 
   private async sendOperation(): Promise<void> {
@@ -99,7 +98,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
     };
 
     this.loading = false;
-    console.log(this.operation);
   }
 
   private reset() {
@@ -127,8 +125,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
     }
     this.digitIndex++;
     this.blackboardComponent.resizeImages();
-
-    console.log(this.operation);
   }
 
   private defineCanvasSize() {
